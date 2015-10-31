@@ -1,6 +1,6 @@
 ## PetExchange
 ### Идеен проект
-[Alt text][https://docs.google.com/document/d/1j7nFPb1_0ymIijLUDNR46d0sElk13rgb3xcrLT0ld4I/edit?usp=sharing (Alttext =PetExchange)]
+[Alt text](https://docs.google.com/document/d/1j7nFPb1_0ymIijLUDNR46d0sElk13rgb3xcrLT0ld4I/edit?usp=sharing "PetExchange")
 
 Web Services and Cloud Technologies – Practical Teamwork Project 2015
 =====================================================================
