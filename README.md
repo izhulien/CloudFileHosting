@@ -1,6 +1,6 @@
-## PetExchange
+## CloudFileHosting
 ### Идеен проект
-[Link to doc file with idea project](https://docs.google.com/document/d/1j7nFPb1_0ymIijLUDNR46d0sElk13rgb3xcrLT0ld4I/edit?usp=sharing "PetExchange")
+[Link to doc file with idea project](https://docs.google.com/document/d/1j7nFPb1_0ymIijLUDNR46d0sElk13rgb3xcrLT0ld4I/edit?usp=sharing "CloudFileHosting")
 
 ### Team members
 1. Жулиен Иванов - zhulien
