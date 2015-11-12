@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Threading;
-using System.Threading.Tasks;
-using System.Web.Http;
-
-namespace CFH.WebAPI.Results
+﻿namespace CFH.WebAPI.Results
 {
+    using System.Net;
+    using System.Net.Http;
+    using System.Threading;
+    using System.Threading.Tasks;
+    using System.Web.Http;
+
     public class ChallengeResult : IHttpActionResult
     {
         public ChallengeResult(string loginProvider, ApiController controller)

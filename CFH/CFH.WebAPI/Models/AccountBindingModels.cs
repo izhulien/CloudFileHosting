@@ -1,9 +1,9 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
-using Newtonsoft.Json;
-
-namespace CFH.WebAPI.Models
+﻿namespace CFH.WebAPI.Models
 {
+    using System;
+    using System.ComponentModel.DataAnnotations;
+    using Newtonsoft.Json;
+
     // Models used as parameters to AccountController actions.
 
     public class AddExternalLoginBindingModel

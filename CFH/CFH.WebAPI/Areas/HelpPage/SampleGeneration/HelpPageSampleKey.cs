@@ -1,10 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Net.Http.Headers;
-
 namespace CFH.WebAPI.Areas.HelpPage
 {
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel;
+    using System.Net.Http.Headers;
+
     /// <summary>
     /// This is used to identify the place where the sample should be applied.
     /// </summary>
@@ -18,7 +18,7 @@ namespace CFH.WebAPI.Areas.HelpPage
         {
             if (mediaType == null)
             {
-                throw new ArgumentNullException("mediaType");
+                throw new ArgumentNullException(nameof(mediaType));
             }
 
             ActionName = String.Empty;
@@ -37,7 +37,7 @@ namespace CFH.WebAPI.Areas.HelpPage
         {
             if (type == null)
             {
-                throw new ArgumentNullException("type");
+                throw new ArgumentNullException(nameof(type));
             }
 
             ParameterType = type;
@@ -58,15 +58,15 @@ namespace CFH.WebAPI.Areas.HelpPage
             }
             if (controllerName == null)
             {
-                throw new ArgumentNullException("controllerName");
+                throw new ArgumentNullException(nameof(controllerName));
             }
             if (actionName == null)
             {
-                throw new ArgumentNullException("actionName");
+                throw new ArgumentNullException(nameof(actionName));
             }
             if (parameterNames == null)
             {
-                throw new ArgumentNullException("parameterNames");
+                throw new ArgumentNullException(nameof(parameterNames));
             }
 
             ControllerName = controllerName;
@@ -88,7 +88,7 @@ namespace CFH.WebAPI.Areas.HelpPage
         {
             if (mediaType == null)
             {
-                throw new ArgumentNullException("mediaType");
+                throw new ArgumentNullException(nameof(mediaType));
             }
 
             MediaType = mediaType;

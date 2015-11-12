@@ -1,7 +1,7 @@
-using System;
-
 namespace CFH.WebAPI.Areas.HelpPage.ModelDescriptions
 {
+    using System;
+
     public class ParameterAnnotation
     {
         public Attribute AnnotationAttribute { get; set; }

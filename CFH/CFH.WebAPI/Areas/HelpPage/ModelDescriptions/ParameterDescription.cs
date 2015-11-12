@@ -1,8 +1,7 @@
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-
 namespace CFH.WebAPI.Areas.HelpPage.ModelDescriptions
 {
+    using System.Collections.ObjectModel;
+
     public class ParameterDescription
     {
         public ParameterDescription()

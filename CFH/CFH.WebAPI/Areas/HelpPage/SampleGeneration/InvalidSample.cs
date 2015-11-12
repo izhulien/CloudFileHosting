@@ -1,7 +1,7 @@
-using System;
-
 namespace CFH.WebAPI.Areas.HelpPage
 {
+    using System;
+
     /// <summary>
     /// This represents an invalid sample on the help page. There's a display template named InvalidSample associated with this class.
     /// </summary>
@@ -11,7 +11,7 @@ namespace CFH.WebAPI.Areas.HelpPage
         {
             if (errorMessage == null)
             {
-                throw new ArgumentNullException("errorMessage");
+                throw new ArgumentNullException(nameof(errorMessage));
             }
             ErrorMessage = errorMessage;
         }

@@ -1,7 +1,7 @@
-using System;
-
 namespace CFH.WebAPI.Areas.HelpPage
 {
+    using System;
+
     /// <summary>
     /// This represents an image sample on the help page. There's a display template named ImageSample associated with this class.
     /// </summary>
@@ -15,7 +15,7 @@ namespace CFH.WebAPI.Areas.HelpPage
         {
             if (src == null)
             {
-                throw new ArgumentNullException("src");
+                throw new ArgumentNullException(nameof(src));
             }
             Src = src;
         }

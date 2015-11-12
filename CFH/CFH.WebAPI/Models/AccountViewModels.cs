@@ -1,8 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace CFH.WebAPI.Models
+﻿namespace CFH.WebAPI.Models
 {
+    using System;
+    using System.Collections.Generic;
+
     // Models returned by AccountController actions.
 
     public class ExternalLoginViewModel
