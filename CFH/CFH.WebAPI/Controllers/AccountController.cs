@@ -26,6 +26,11 @@
         private const string LocalLoginProvider = "Local";
         private ApplicationUserManager _userManager;
 
+        public AccountController()
+            :base(new CFHData())
+        {
+        }
+
         public AccountController(ApplicationUserManager userManager,
             ISecureDataFormat<AuthenticationTicket> accessTokenFormat)
                         : base(new CFHData())

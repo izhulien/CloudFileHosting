@@ -1,10 +1,4 @@
-﻿using CFH.Data;
-using CFH.Data.Contracts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+﻿using CFH.Data.Contracts;
 using System.Web.Http;
 
 namespace CFH.WebAPI.Controllers

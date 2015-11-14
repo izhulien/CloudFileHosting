@@ -3,7 +3,7 @@
     using System.Collections.Generic;
     using System.Web.Http;
 
-    [Authorize]
+    // [Authorize]
     public class ValuesController : ApiController
     {
         // GET api/values
