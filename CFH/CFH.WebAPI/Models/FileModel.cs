@@ -13,7 +13,5 @@
         public string Link { get; set; }
 
         public int ApplicationUserId { get; set; }
-
-        public int DirectoryId { get; set; }
     }
 }

@@ -1,5 +1,6 @@
 ﻿namespace CFH.Models
 {
+    using System;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
 
@@ -11,6 +12,7 @@
     {
         [Key]
         public int FileId { get; set; }
+        public DateTime DateCreated { get; set; }
 
         public string Name { get; set; }
 
@@ -20,15 +22,13 @@
 
         public string Link { get; set; }
 
-        public int Count { get; set; }
-
         [ForeignKey("ApplicationUser")]
         public int ApplicationUserId { get; set; }
 
         public virtual ApplicationUser ApplicationUser { get; set; }
 
-        public int DirectoryId { get; set; }
+        public bool IsDeleted { get; set; }
 
-        public virtual Directory Directory { get; set; }
+        public bool IsInTrash { get; set; }
     }
 }

@@ -7,43 +7,34 @@
     using CFH.Data.Repositories;
     using CFH.Models;
 
-    public class ConditionData : IConditioData
+    public class CFHData : ICFHData
     {
         private readonly DbContext context;
         private readonly IDictionary<Type, object> repositories = new Dictionary<Type, object>();
 
-        public ConditionData(DbContext context)
+        public CFHData(DbContext context)
         {
             this.context = context;
         }
 
-        public ConditionData()
+        public CFHData()
             : this(new ApplicationDbContext())
         {
         }
-
-        public IGenericRepository<Condition> Conditions
-        {
-            get
-            {
-                return this.GetRepository<Condition>();
-            }
-        }
-
-        public IGenericRepository<Directory> Directories
-        {
-            get
-            {
-                return this.GetRepository<Directory>();
-            }
-        }
-
 
         public IGenericRepository<File> Files
         {
             get
             {
                 return this.GetRepository<File>();
+            }
+        }
+
+        public IGenericRepository<ApplicationUser> Users
+        {
+            get
+            {
+                return this.GetRepository<ApplicationUser>();
             }
         }
 

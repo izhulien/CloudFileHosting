@@ -18,38 +18,8 @@ namespace CFH.Data.Migrations
             this.SeedDirectories(context);
         }
 
-        private void SeedDirectories(IConditioDbContext context)
+        private void SeedDirectories(ICFHDbContext context)
         {
-            if (context.Directories.Any())
-            {
-                return;
-            }
-
-            context.Directories.Add(new Directory()
-            {
-                Name = "Books"
-            });
-
-            context.Directories.Add(new Directory()
-            {
-                Name = "Programs"
-            });
-
-            context.Directories.Add(new Directory()
-            {
-                Name = "Pictures"
-            });
-
-            context.Directories.Add(new Directory()
-            {
-                Name = "Video"
-            });
-
-            context.Directories.Add(new Directory()
-            {
-                Name = "Audio"
-            });
-
             context.SaveChanges();
         }
     }

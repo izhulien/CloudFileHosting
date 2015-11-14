@@ -1,7 +1,13 @@
-﻿namespace CFH.Common
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CFH.Common
 {
-    public class ConnectionStrings
+    public static class ConnectionStrings
     {
-        public const string DefaultConnection = @"name=""ConnectionStringName""providerName=""System.Data.SqlClient""connectionString=""Data Source=.\SQLEXPRESS;Initial Catalog=CFH;Integrated Security=True;MultipleActiveResultSets=True";
+        public static string DefaultConnection = "Me";
     }
 }

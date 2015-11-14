@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CFH.Data", "CFH.Data\CFH.Da
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CFH.WebAPI", "CFH.WebAPI\CFH.WebAPI.csproj", "{CDC2821F-0723-49EA-927C-A3F9D360C067}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CFH.Common", "CFH.Common\CFH.Common.csproj", "{7F0D3A6D-4A81-4D0F-85E0-D3F9EE7FE84D}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{CDC2821F-0723-49EA-927C-A3F9D360C067}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CDC2821F-0723-49EA-927C-A3F9D360C067}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CDC2821F-0723-49EA-927C-A3F9D360C067}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7F0D3A6D-4A81-4D0F-85E0-D3F9EE7FE84D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7F0D3A6D-4A81-4D0F-85E0-D3F9EE7FE84D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7F0D3A6D-4A81-4D0F-85E0-D3F9EE7FE84D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7F0D3A6D-4A81-4D0F-85E0-D3F9EE7FE84D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

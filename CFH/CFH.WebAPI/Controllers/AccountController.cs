@@ -17,20 +17,18 @@
     using CFH.WebAPI.Models;
     using CFH.WebAPI.Providers;
     using CFH.WebAPI.Results;
+    using Data;
 
     [Authorize]
     [RoutePrefix("api/Account")]
-    public class AccountController : ApiController
+    public class AccountController : BaseController
     {
         private const string LocalLoginProvider = "Local";
         private ApplicationUserManager _userManager;
 
-        public AccountController()
-        {
-        }
-
         public AccountController(ApplicationUserManager userManager,
             ISecureDataFormat<AuthenticationTicket> accessTokenFormat)
+                        : base(new CFHData())
         {
             UserManager = userManager;
             AccessTokenFormat = accessTokenFormat;

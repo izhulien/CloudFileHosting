@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7F0D3A6D-4A81-4D0F-85E0-D3F9EE7FE84D}</ProjectGuid>
+    <ProjectGuid>{51C6D934-E43B-439E-A603-6CA6CC1DF9D4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CFH.Common</RootNamespace>

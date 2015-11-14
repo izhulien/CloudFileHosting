@@ -27,6 +27,9 @@
                 this.files = value;
             }
         }
+        public int AvatarId { get; set; }
+
+        public virtual File Avatar{ get; set; }
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager, string authenticationType)
         {

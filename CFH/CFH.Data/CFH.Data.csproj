@@ -85,9 +85,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationDbContext.cs" />
-    <Compile Include="ConditionData.cs" />
-    <Compile Include="Contracts\IConditioData.cs" />
-    <Compile Include="Contracts\IConditioDbContext.cs" />
+    <Compile Include="CFHData.cs" />
+    <Compile Include="Contracts\ICFHData.cs" />
+    <Compile Include="Contracts\ICFHDbContext.cs" />
     <Compile Include="Contracts\IDbContext.cs" />
     <Compile Include="Contracts\IGenericRepository.cs" />
     <Compile Include="Migrations\Configuration.cs" />
@@ -100,10 +100,6 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\CFH.Common\CFH.Common.csproj">
-      <Project>{7f0d3a6d-4a81-4d0f-85e0-d3f9ee7fe84d}</Project>
-      <Name>CFH.Common</Name>
-    </ProjectReference>
     <ProjectReference Include="..\CFH.Models\CFH.Models.csproj">
       <Project>{04267f1d-b4e4-463b-99c5-5310539bcdb3}</Project>
       <Name>CFH.Models</Name>

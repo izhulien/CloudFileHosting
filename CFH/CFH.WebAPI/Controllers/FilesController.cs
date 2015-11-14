@@ -8,26 +8,26 @@
     using CFH.Data;
     using CFH.Models;
     using CFH.WebAPI.Models;
+    using Microsoft.AspNet.Identity;
+    using System.Web;
 
-    public class FilesController : ApiController
+    public class FilesController : BaseController
     {
         private static readonly Random random = new Random();
-        private readonly ConditionData data;
 
         public FilesController()
+            :base(new CFHData())
         {
-            this.data = new ConditionData();
         }
 
         public IQueryable<FileModel> GetFiles()
         {
-            return this.data.Files
+            return this.Data.Files
                             .All()
                             .Select(x => new FileModel()
                             {
                                 Id = x.FileId,
                                 Link = x.Link,
-                                DirectoryId = x.DirectoryId,
                                 ApplicationUserId = x.ApplicationUserId
                             });
         }
@@ -36,9 +36,9 @@
         public IQueryable<FileModel> GetTwoRandomFileFromDirectory(int directoryId)
         {
 
-            var fileIds = this.data.Files.All();
+            var fileIds = this.Data.Files.All();
             var skip = (int)(random.NextDouble() * fileIds.Count());
-            var files = this.data.Files
+            var files = this.Data.Files
                 .All()
                 .OrderBy(c => c.FileId)
                 .Skip(skip)
@@ -48,23 +48,15 @@
             {
                 Id = x.FileId,
                 Link = x.Link,
-                DirectoryId = x.DirectoryId,
                 ApplicationUserId = x.ApplicationUserId
             })
             .Take(2);
         }
 
         [HttpGet]
-        public IQueryable<FileModel> GetRandomFileFromRandomDirectory()
-        {
-            int randomDirectory = GetRandomDirectoryId();
-            return GetTwoRandomFileFromDirectory(randomDirectory);
-        }
-
-        [HttpGet]
         public IHttpActionResult GetFile(int id)
         {
-            FileModel file = data.Files
+            FileModel file = Data.Files
                 .All()
                 .Where(x => x.FileId == id)
                 .Select(x =>
@@ -72,7 +64,6 @@
                     {
                         Id = x.FileId,
                         Link = x.Link,
-                        DirectoryId = x.DirectoryId,
                         ApplicationUserId = x.ApplicationUserId
                     })
                 .FirstOrDefault();
@@ -99,13 +90,13 @@
             }
 
             // TODO Add validations
-            this.data.Files
+            this.Data.Files
                 .Find(file.Id)
                 .Link = file.Link;
 
             try
             {
-                this.data.SaveChanges();
+                this.Data.SaveChanges();
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -122,23 +113,33 @@
             return StatusCode(HttpStatusCode.NoContent);
         }
 
+        [Authorize]
         [HttpPost]
-        public IHttpActionResult PostPicture(FileModel file)
+        public IHttpActionResult PostFile(FileModel file)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            this.data.Files
+            int userId = int.Parse(User.Identity.GetUserId());
+            var user = Data.Users.Find(userId);
+
+            string subPath = "ImagesPath"; // your code goes here
+
+            bool exists = System.IO.Directory.Exists(HttpContext.Current.Server.MapPath("Images"));
+
+            //if (!exists)
+            //    System.IO.Directory.CreateDirectory(Server.MapPath(subPath));
+
+            this.Data.Files
                      .Add(new File()
                      {
-                         DirectoryId = file.DirectoryId,
                          ApplicationUserId = file.ApplicationUserId,
                          Link = file.Link
                      });
 
-            this.data.SaveChanges();
+            this.Data.SaveChanges();
             return CreatedAtRoute("DefaultApi", new { id = file.Id }, file);
         }
 
@@ -153,13 +154,6 @@
                 return BadRequest("ApplicationUserId NOT FOUND");
             }
 
-            if (file.DirectoryId == null ||
-                !dbContext.Directories
-                .Any(x => x.DirId == file.DirectoryId))
-            {
-                return BadRequest("DirectoryId NOT FOUND");
-            }
-
             if (file.Link == null || !file.Link.StartsWith("https://"))
             {
                 return BadRequest("Invalid Url");
@@ -172,7 +166,7 @@
         [HttpDelete]
         public IHttpActionResult DeleteFile(int id)
         {
-            File file = this.data.Files
+            File file = this.Data.Files
                 .Find(id);
 
             if (file == null)
@@ -180,8 +174,8 @@
                 return NotFound();
             }
 
-            this.data.Files.Delete(file);
-            this.data.SaveChanges();
+            this.Data.Files.Delete(file);
+            this.Data.SaveChanges();
 
             return Ok(string.Format("File {0} DELETED", id));
         }
@@ -190,31 +184,16 @@
         {
             if (disposing)
             {
-                this.data.Dispose();
+                this.Data.Dispose();
             }
             base.Dispose(disposing);
         }
 
         private bool FileExists(int id)
         {
-            return this.data.Files
+            return this.Data.Files
                 .All()
                 .Count(e => e.FileId == id) > 0;
-        }
-
-        private int GetRandomDirectoryId()
-        {
-            var directoryIds = this.data.Directories
-                .All()
-                .Select(d => d.DirId);
-            var skip = (int)(random.NextDouble() * directoryIds.Count());
-            return this.data.Directories
-                .All()
-                .OrderBy(d => d.DirId)
-                .Skip(skip)
-                .Take(1)
-                .First()
-                .DirId;
         }
     }
 }
