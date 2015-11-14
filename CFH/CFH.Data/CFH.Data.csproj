@@ -84,11 +84,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationDbContext.cs" />
+    <Compile Include="Contracts\IConditioData.cs" />
+    <Compile Include="Contracts\IConditioDataContext.cs" />
+    <Compile Include="Contracts\IDbContext.cs" />
+    <Compile Include="Contracts\IGenericRepository.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\GenericRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\CFH.Common\CFH.Common.csproj">
+      <Project>{7f0d3a6d-4a81-4d0f-85e0-d3f9ee7fe84d}</Project>
+      <Name>CFH.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CFH.Models\CFH.Models.csproj">
+      <Project>{04267f1d-b4e4-463b-99c5-5310539bcdb3}</Project>
+      <Name>CFH.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
