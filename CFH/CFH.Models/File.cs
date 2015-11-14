@@ -20,6 +20,8 @@
 
         public string Link { get; set; }
 
+        public int Count { get; set; }
+
         [ForeignKey("ApplicationUser")]
         public int ApplicationUserId { get; set; }
 

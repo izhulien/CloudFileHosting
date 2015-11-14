@@ -5,7 +5,7 @@
         //[Required]
         //[MinLength(40)]
         //[MaxLength(40)]
-        public string UserId { get; set; }
+        public int UserId { get; set; }
 
         public int UploadFileId { get; set; }
 
