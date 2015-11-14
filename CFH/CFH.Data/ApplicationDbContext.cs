@@ -7,7 +7,7 @@
     using CFH.Models;
     using Microsoft.AspNet.Identity.EntityFramework;
 
-    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>, IConditioDataContext
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>, IConditioDbContext
     {
 
         public ApplicationDbContext()

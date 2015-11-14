@@ -1,14 +1,14 @@
+using System;
+using System.Globalization;
+using System.Linq;
+using System.Reflection;
+using System.Web.Http.Controllers;
+using System.Web.Http.Description;
+using System.Xml.XPath;
+using CFH.WebAPI.Areas.HelpPage.ModelDescriptions;
+
 namespace CFH.WebAPI.Areas.HelpPage
 {
-    using System;
-    using System.Globalization;
-    using System.Linq;
-    using System.Reflection;
-    using System.Web.Http.Controllers;
-    using System.Web.Http.Description;
-    using System.Xml.XPath;
-    using CFH.WebAPI.Areas.HelpPage.ModelDescriptions;
-
     /// <summary>
     /// A custom <see cref="IDocumentationProvider"/> that reads the API documentation from an XML documentation file.
     /// </summary>
@@ -29,7 +29,7 @@ namespace CFH.WebAPI.Areas.HelpPage
         {
             if (documentPath == null)
             {
-                throw new ArgumentNullException(nameof(documentPath));
+                throw new ArgumentNullException("documentPath");
             }
             XPathDocument xpath = new XPathDocument(documentPath);
             _documentNavigator = xpath.CreateNavigator();

@@ -1,7 +1,7 @@
+using System.Collections.ObjectModel;
+
 namespace CFH.WebAPI.Areas.HelpPage.ModelDescriptions
 {
-    using System.Collections.ObjectModel;
-
     public class ComplexTypeModelDescription : ModelDescription
     {
         public ComplexTypeModelDescription()

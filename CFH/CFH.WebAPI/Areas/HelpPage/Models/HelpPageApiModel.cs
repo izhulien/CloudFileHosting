@@ -1,11 +1,11 @@
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Net.Http.Headers;
+using System.Web.Http.Description;
+using CFH.WebAPI.Areas.HelpPage.ModelDescriptions;
+
 namespace CFH.WebAPI.Areas.HelpPage.Models
 {
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.Net.Http.Headers;
-    using System.Web.Http.Description;
-    using CFH.WebAPI.Areas.HelpPage.ModelDescriptions;
-
     /// <summary>
     /// The model that represents an API displayed on the help page.
     /// </summary>

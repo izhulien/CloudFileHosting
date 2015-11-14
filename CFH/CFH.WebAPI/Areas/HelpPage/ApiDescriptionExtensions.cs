@@ -1,10 +1,10 @@
+using System;
+using System.Text;
+using System.Web;
+using System.Web.Http.Description;
+
 namespace CFH.WebAPI.Areas.HelpPage
 {
-    using System;
-    using System.Text;
-    using System.Web;
-    using System.Web.Http.Description;
-
     public static class ApiDescriptionExtensions
     {
         /// <summary>
@@ -31,7 +31,7 @@ namespace CFH.WebAPI.Areas.HelpPage
                 localPath.Replace("/", "-").Replace("{", String.Empty).Replace("}", String.Empty));
             if (queryKeyString != null)
             {
-                friendlyPath.AppendFormat("_{0}", queryKeyString);
+                friendlyPath.AppendFormat("_{0}", queryKeyString.Replace('.', '-'));
             }
             return friendlyPath.ToString();
         }

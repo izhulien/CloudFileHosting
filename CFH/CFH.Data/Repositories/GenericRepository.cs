@@ -13,7 +13,7 @@
         {
         }
 
-        public GenericRepository(IConditioDataContext context)
+        public GenericRepository(IConditioDbContext context)
         {
             if (context == null)
             {
@@ -26,7 +26,7 @@
 
         protected IDbSet<T> DbSet { get; set; }
 
-        protected IConditioDataContext Context { get; set; }
+        protected IConditioDbContext Context { get; set; }
 
         public virtual IQueryable<T> All()
         {

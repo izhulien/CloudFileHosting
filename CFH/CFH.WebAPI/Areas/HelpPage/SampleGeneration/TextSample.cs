@@ -1,7 +1,7 @@
+using System;
+
 namespace CFH.WebAPI.Areas.HelpPage
 {
-    using System;
-
     /// <summary>
     /// This represents a preformatted text sample on the help page. There's a display template named TextSample associated with this class.
     /// </summary>
@@ -11,7 +11,7 @@ namespace CFH.WebAPI.Areas.HelpPage
         {
             if (text == null)
             {
-                throw new ArgumentNullException(nameof(text));
+                throw new ArgumentNullException("text");
             }
             Text = text;
         }

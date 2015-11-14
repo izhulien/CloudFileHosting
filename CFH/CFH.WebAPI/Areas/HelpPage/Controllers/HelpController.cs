@@ -1,11 +1,11 @@
+using System;
+using System.Web.Http;
+using System.Web.Mvc;
+using CFH.WebAPI.Areas.HelpPage.ModelDescriptions;
+using CFH.WebAPI.Areas.HelpPage.Models;
+
 namespace CFH.WebAPI.Areas.HelpPage.Controllers
 {
-    using System;
-    using System.Web.Http;
-    using System.Web.Mvc;
-    using CFH.WebAPI.Areas.HelpPage.ModelDescriptions;
-    using CFH.WebAPI.Areas.HelpPage.Models;
-
     /// <summary>
     /// The controller that will handle requests for the help page.
     /// </summary>

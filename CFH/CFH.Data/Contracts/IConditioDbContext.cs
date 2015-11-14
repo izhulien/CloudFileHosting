@@ -3,7 +3,7 @@
     using System.Data.Entity;
     using CFH.Models;
 
-    public interface IConditioDataContext : IDbContext
+    public interface IConditioDbContext : IDbContext
     {
         IDbSet<File> Files { get; set; }
 

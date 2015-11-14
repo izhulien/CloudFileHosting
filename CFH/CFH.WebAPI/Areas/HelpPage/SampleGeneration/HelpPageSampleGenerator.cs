@@ -1,20 +1,20 @@
+using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Diagnostics.CodeAnalysis;
+using System.Globalization;
+using System.IO;
+using System.Linq;
+using System.Net.Http;
+using System.Net.Http.Formatting;
+using System.Net.Http.Headers;
+using System.Web.Http.Description;
+using System.Xml.Linq;
+using Newtonsoft.Json;
+
 namespace CFH.WebAPI.Areas.HelpPage
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Collections.ObjectModel;
-    using System.ComponentModel;
-    using System.Diagnostics.CodeAnalysis;
-    using System.Globalization;
-    using System.IO;
-    using System.Linq;
-    using System.Net.Http;
-    using System.Net.Http.Formatting;
-    using System.Net.Http.Headers;
-    using System.Web.Http.Description;
-    using System.Xml.Linq;
-    using Newtonsoft.Json;
-
     /// <summary>
     /// This class will generate the samples for the help page.
     /// </summary>
@@ -91,7 +91,7 @@ namespace CFH.WebAPI.Areas.HelpPage
         {
             if (api == null)
             {
-                throw new ArgumentNullException(nameof(api));
+                throw new ArgumentNullException("api");
             }
             string controllerName = api.ActionDescriptor.ControllerDescriptor.ControllerName;
             string actionName = api.ActionDescriptor.ActionName;
@@ -239,7 +239,7 @@ namespace CFH.WebAPI.Areas.HelpPage
             }
             if (api == null)
             {
-                throw new ArgumentNullException(nameof(api));
+                throw new ArgumentNullException("api");
             }
             Type type;
             if (ActualHttpMessageTypes.TryGetValue(new HelpPageSampleKey(sampleDirection, controllerName, actionName, parameterNames), out type) ||
@@ -289,11 +289,11 @@ namespace CFH.WebAPI.Areas.HelpPage
         {
             if (formatter == null)
             {
-                throw new ArgumentNullException(nameof(formatter));
+                throw new ArgumentNullException("formatter");
             }
             if (mediaType == null)
             {
-                throw new ArgumentNullException(nameof(mediaType));
+                throw new ArgumentNullException("mediaType");
             }
 
             object sample = String.Empty;
