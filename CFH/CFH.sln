@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CFH.WebAPI", "CFH.WebAPI\CF
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CFH.DropboxApi", "CFH.DropboxApi\CFH.DropboxApi.csproj", "{6D75D308-2A76-4099-8E65-FAC48A07219C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CFH.ConsoleClient", "CFH.ConsoleClient\CFH.ConsoleClient.csproj", "{6449A5F5-EB53-4049-80C8-C38ED3CB88B0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{6D75D308-2A76-4099-8E65-FAC48A07219C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D75D308-2A76-4099-8E65-FAC48A07219C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D75D308-2A76-4099-8E65-FAC48A07219C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6449A5F5-EB53-4049-80C8-C38ED3CB88B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6449A5F5-EB53-4049-80C8-C38ED3CB88B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6449A5F5-EB53-4049-80C8-C38ED3CB88B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6449A5F5-EB53-4049-80C8-C38ED3CB88B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

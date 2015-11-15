@@ -95,10 +95,18 @@
     <Compile Include="Repositories\GenericRepository.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include=".bin\bower.cmd" />
+    <None Include=".bin\node.cmd" />
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Scripts\sammy-0.7.5.js" />
+    <Content Include="Scripts\sammy-0.7.5.min.js" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CFH.Models\CFH.Models.csproj">
       <Project>{04267f1d-b4e4-463b-99c5-5310539bcdb3}</Project>
